@@ -1,10 +1,12 @@
 :root {
     --color-primary: #2584ff;
     --color-secondary: #00d9ff;
-    --color-primary: #ff3400;
+    --color-accent: #ff3400;
     --color-heading: #1b0760;
     --color-body: #918ca4
 }
+
+/* Typography */
 
 html {
     font-size: 62.5%;
@@ -47,5 +49,34 @@ p {
 
     h3 {
         font-size: 2.4rem;
+    }
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+.link-arrow {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.link-arrow::after {
+    content: '-->';
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.15s;
+}
+
+.link-arrow:hover::after {
+    transform: translateX(5px);
+}
+
+@media screen and (min-width: 1024px) {
+    .link-arrow {
+        font-size: 1.5rem;
     }
 }
